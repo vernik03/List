@@ -23,7 +23,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Button_t {
     QByteArrayData data[5];
-    char stringdata0[80];
+    char stringdata0[76];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -36,12 +36,11 @@ QT_MOC_LITERAL(0, 0, 6), // "Button"
 QT_MOC_LITERAL(1, 7, 18), // "change_star_signal"
 QT_MOC_LITERAL(2, 26, 0), // ""
 QT_MOC_LITERAL(3, 27, 21), // "on_pushButton_clicked"
-QT_MOC_LITERAL(4, 49, 30) // "on_pushButton_show_fav_clicked"
+QT_MOC_LITERAL(4, 49, 26) // "on_pushButton_call_clicked"
 
     },
     "Button\0change_star_signal\0\0"
-    "on_pushButton_clicked\0"
-    "on_pushButton_show_fav_clicked"
+    "on_pushButton_clicked\0on_pushButton_call_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -83,7 +82,7 @@ void Button::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         switch (_id) {
         case 0: _t->change_star_signal(); break;
         case 1: _t->on_pushButton_clicked(); break;
-        case 2: _t->on_pushButton_show_fav_clicked(); break;
+        case 2: _t->on_pushButton_call_clicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {

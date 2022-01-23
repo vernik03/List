@@ -11,12 +11,14 @@ CONFIG += c++11
 SOURCES += \
     button.cpp \
     contactlistprovider.cpp \
+    header.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     button.h \
     contactlistprovider.h \
+    header.h \
     mainwindow.h
 
 FORMS += \
@@ -42,3 +44,14 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 DISTFILES += \
     avatars.txt \
     names_list.txt
+
+QMAKE_EXTRA_TARGETS += before_build makefilehook
+
+makefilehook.target = $(MAKEFILE)
+makefilehook.depends = .beforebuild
+
+PRE_TARGETDEPS += .beforebuild
+
+before_build.target = .beforebuild
+before_build.depends = FORCE
+before_build.commands = chcp 1251
